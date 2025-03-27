@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ------ PAGE HEADER START ------ */
+header {
+    font-family: "American Typewriter", "Courier New", serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: navy;
+    padding: 15px 25px;
+    color: white;
+}
+
+.logo {
+    font-family: "Courier New", sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo:hover {
+    color: darkorange;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: orange;
+}
+
+nav ul li a:visited {
+    /* leave blank, don't want navigation links to change colour */
+}
+
+.unstyled-link {
+    text-decoration: none;
+    color: inherit;
+}
+/* ------ PAGE HEADER END ------ */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Courier New", "American Typewriter", "serif";
+    font-weight: bold;
+}
+
+body {
+    font-family: sans-serif;
+}
