@@ -1,0 +1,117 @@
+/*
+------ THIS CSS FILE (card-style.css) IS FOR USE BY about-us.html IN ADDITION TO THE CORE styles.css ------
+------ IT OFFERS STYLING FOR THE PROGRAMMING LANGUAGE CARDS AND ITS RELATED FUNCTIONALITY ------
+------ SOME ADDITIONAL CSS IS OVERRIDDEN FROM styles.css FOR DESIGN PURPOSES ------
+ */
+#container {
+    display: flex;
+    flex-direction: column;
+    width:80%;
+    margin:.5em auto;
+    padding:1em;
+}
+
+h1 {
+    text-align:center;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    flex: 0 0 250px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 6px 0 rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+    background: #F0F8FF;
+}
+
+/* Adding some customisations to how the card displays */
+.card b {
+    color: #00004d;
+    font-family: "American Typewriter","Consolas", "Lucida Console", monospace, serif;
+    font-weight: normal;
+}
+
+.card ul {
+    text-align: left;
+    list-style: square;
+}
+
+.card img {
+    max-width: 100%;
+    margin: 0;
+}
+
+.card .text {
+    padding: 0 20px 10px;
+}
+
+.card p:nth-of-type(3) {
+    padding-bottom: 1em;
+    border-bottom: solid lightgray 1px;
+}
+
+.card p:nth-of-type(3) {
+    color: gray;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    background: white;
+}
+
+form {
+    width: 50%;
+    border: 2px solid #00004d;
+    padding: 1em 5em;
+    margin: 1em auto;
+    background: #F0F8FF;
+}
+
+.form-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #00004d;
+    font-family: "American Typewriter", "Courier New", "Consolas", "Lucida Console", monospace, sans-serif;
+    gap: 10px;
+}
+
+.form-row>label {
+    flex: 0 1 30%;
+    font-weight: bold;
+    font-size: 1.2em;
+
+}
+
+form input {
+    flex: 2;
+    padding: 0.5em;
+    margin-bottom: 1em;
+}
+
+
+form button {
+    font-family: "Courier New", "Consolas", "Lucida Console", monospace, sans-serif;
+    padding: 1em;
+    background: #00ABE4;
+    color: white;
+    border: 0;
+    margin-top: 1em;
+}
+
+form button:active {
+    background: orangered;
+    /* Transform used to make it look like it has actually been pushed in */
+    transform: scale(0.92);
+}
+
+main section {
+    padding-bottom: 20px; /* Needed to avoid overlap when bottom element hovered inducing transform*/
+}

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Data Manipulation on CodeVerse</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="images/favicon/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/computer-sys-style.css">
+</head>
+
+<body>
+<header>
+  <div class="logo"><a href="index.html" class="unstyled-link">CodeVerse</a></div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about-us.html">About Us</a></li>
+      <li><a href="data-manipulation.html" class="active">Data Manipulation</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <img id="banner-img-data-manipulation" class="banner" src="images/data-manipulation/data-manipulation-1.png"
+       alt="Banner Image">
+  <h1>Data Manipulation on CodeVerse</h1>
+  <div id ="container-row">
+    <section>
+      <h2>Computer Management System</h2>
+      <div class="left-align">
+        <p>
+          This page provides a fully functional computer
+          management system that is searchable by any value, or partial value, of the data stored.
+          For instance, you can search by a manufacturer like <i>Apple</i> or <i>HP</i>, or by the type
+          of computing device, or even by a specific part of the specifications, <i>e.g.</i>, entering
+          <q>256GB</q> will return any computing device with storage or even
+          <abbr title="Random Access Memory">RAM</abbr> (server) of 256GB.
+        </p>
+        <p>Additional JavaScript functionality includes dynamic page updates (real-time searching without requiring a
+          key/button press to view the return), data validation, computer (record) deletion with a detailed confirm
+          prompt, an alert prompt with details when you add an item to the system, clearing form fields, clearing search
+          results, a last updated timestamp, an ability to change the last updated timestamp to the current time,
+          and also to reverse that change.
+          </p>
+      </div>
+      <div id="container">
+        <form>
+          <h3>Add a Computer</h3>
+          <div class="form-row">
+            <label for="serialNum">Serial Number</label>
+            <input type="text" name="serialNum" id="serialNum" autofocus required title="Please enter a valid
+            Serial Number" placeholder="SN789012">
+          </div>
+
+          <div class="form-row">
+            <label for="manufacturer">Make</label>
+            <select name="manufacturer" id="manufacturer">
+              <option value="Acer" selected>Acer</option>
+              <option value="Apple">Apple</option>
+              <option value="Asus">Asus</option>
+              <option value="Dell">Dell</option>
+              <option value="HP">HP</option>
+              <option value="Lenovo">Lenovo</option>
+              <option value="LG">LG</option>
+              <option value="Microsoft">Microsoft</option>
+              <option value="Nokia">Nokia</option>
+              <option value="Samsung">Samsung</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="type">Type</label>
+            <select name="type" id="type">
+              <option value="Desktop" selected>Desktop</option>
+              <option value="Embedded">Embedded</option>
+              <option value="Laptop">Laptop</option>
+              <option value="Mainframe">Mainframe</option>
+              <option value="Mini-Computer">Mini-Computer</option>
+              <option value="PDA">PDA</option>
+              <option value="Quantum">Quantum</option>
+              <option value="Server">Server</option>
+              <option value="Smartphone">Smartphone</option>
+              <option value="Tablet">Tablet</option>
+              <option value="Watch">Watch</option>
+              <option value="Wearable">Wearable</option>
+              <option value="Workstation">Workstation</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="specification">Specification</label>
+            <input type="text" name="specification" id="specification" required title="Please enter a valid computer
+            specification" placeholder="Intel Core i5, 8GB RAM, 256GB SSD">
+          </div>
+          <div class="form-row">
+            <label for="price">Price (€)</label>
+            <!-- Currency must be to 2 d.p. -->
+            <input type="number" name="price" id="price" required step="0.01" inputmode="decimal"
+                   title="Please enter a valid price" placeholder="499.99">
+          </div>
+          <button type="reset" id="reset">
+            Clear Input
+          </button>
+          <button type="submit">
+            Add a Computer
+          </button>
+        </form>
+
+
+        <div class="form-row">
+          <div class="search-system">
+            <h3>Search for a Computer</h3>
+            <label for="searchInput"></label>
+            <input type="text" id="searchInput" placeholder="2TB SSD">
+            <button id="reset-search-button">Clear Results</button>
+          </div>
+        </div>
+
+
+        <table>
+          <thead>
+          <tr>
+            <th>Manufacturer</th>
+            <th>Type</th>
+            <th>Specification</th>
+            <th>Price</th>
+            <th></th>
+          </tr>
+          </thead>
+          <tbody id="computer-list"></tbody>
+        </table>
+        <span id="com-mgmt-last-update"></span>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-top">
+    <div class="logo"><a href="index.html" class="unstyled-link">CodeVerse</a></div>
+    <nav>
+      <ul class="footer-nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about-us.html">About Us</a></li>
+        <li><a href="data-manipulation.html" class="active">Data Manipulation</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 CodeVerse. All rights reserved. By <a href="mailto:21788075@mail.wit.ie">Joe O'Mahony</a>.</span>
+    <span id="date"></span>
+  </div>
+</footer>
+
+<script src="js/data-manipulation.js"></script>
+</body>
+</html>

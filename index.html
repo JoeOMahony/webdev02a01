@@ -2,20 +2,160 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Programming Languages</title>
+    <title>Welcome to CodeVerse!</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="images/favicon/favicon.ico" type="image/x-icon">
 </head>
+
 <body>
 <header>
     <div class="logo"><a href="index.html" class="unstyled-link">CodeVerse</a></div>
     <nav>
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="data-manipulation.html">Data Manipulation</a></li>
         </ul>
     </nav>
 </header>
+
+<main>
+    <img id="banner-img-welcome" class="banner" src="images/index/welcome-1.png" alt="Banner Image">
+
+    <h1>Welcome to CodeVerse,</h1>
+
+    <div class="sections-side-by-side">
+        <section>
+            <h2>What This Website Is About</h2>
+            <p>
+                <span class="site-name">CodeVerse</span> is a website for programming languages, data manipulation,
+                and other related information.
+            </p>
+            <p>
+                This website was made under Assignment 01 for Trish O'Neill by
+                <a href="mailto:21788075@mail.wit.ie">Joe O'Mahony</a> (W21788075) as part of the
+                Website Development 02 module. <span class="site-name">CodeVerse</span> has been implemented
+                using HTML, CSS, and JavaScript. No external JavaScript libraries have been used.
+            </p>
+            <span>This website features:</span>
+            <ul>
+                <li>A welcome page,</li>
+                <li>A page for data manipulation and display,</li>
+                <li>An about us page, and</li>
+                <li>Extensive JavaScript functionality interspersed throughout.</li>
+            </ul>
+
+            <span>Some examples of <abbr title="JavaScript">JS</abbr> functionality <b>on this page</b> include:</span>
+            <ul style="list-style: none">
+                <li>⏰  A live 24-hour clock in the footer, featuring continuously-updating seconds
+                    (featured on all pages),</li>
+                <li>❗️  An interactive factorial calculator, including the following <abbr title="JavaScript">JS</abbr>
+                    functionality:
+                <ul>
+                    <li><abbr title="Document Object Model">DOM</abbr> manipulation,</li>
+                    <li>Event listeners,</li>
+                    <li>Not a number (NaN) data type checking, and</li>
+                    <li>Use of the Math library.</li>
+                </ul></li>
+                <li>🎆  A rollover banner image.</li>
+            </ul>
+
+            <div class="factorial-section">
+                <h3>Factorial Calculator</h3>
+                <form>
+                    <div class="form-row">
+                        <label for="num">Number: </label>
+                        <input type="text" id="num" name="num" required pattern="\d{1,2}"
+                               title="Positive integers only">
+                    </div>
+                    <div class="form-row">
+                        <label for="factorial">Factorial: </label>
+                        <input type="text" id="factorial" name="factorial" disabled>
+                    </div>
+                    <button type="button" id="random-number">Random Number</button>
+                    <button type="submit" id="calculate-factorial">Calculate Factorial</button>
+                </form>
+            </div>
+        </section>
+
+        <section>
+            <h2>What Data We Store</h2>
+            <p><span class="site-name">CodeVerse</span> allows for data input, storage, and manipulation on the
+                <a href="about-us.html">About Us</a> page and the <a href="data-manipulation.html">Data Manipulation</a>
+                page.</p>
+            <div>
+                <h3>About Us</h3>
+                <p>
+                    The <a href="about-us.html">about us</a> page stores cards representing a variety of programming
+                    languages in <abbr title="JavaScript Object Notation">JSON</abbr> format, which can then be
+                    filtered by the generally-accepted difficulty in learning them.
+                </p>
+
+                <h4>👩‍💻 Information stored on each programming language</h4>
+                <ul>
+                    <li>Name,</li>
+                    <li>Logo</li>
+                    <li>Release year,</li>
+                    <li>How it's typed (static/dynamic/etc.)</li>
+                    <li>Whether it's compiled or interpreted,</li>
+                    <li>Performance,</li>
+                    <li>Estimated user base, and</li>
+                    <li>A variety of use cases.</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>Data Manipulation</h3>
+                <p>
+                    The <a href="data-manipulation.html">data manipulation</a> page provides a fully functional computer
+                    management system that is searchable by any value, or partial value, of the data stored.
+                    For instance, you can search by a manufacturer like <i>Apple</i> or <i>HP</i>, or by the type
+                    of computing device, or even by a specific part of the specifications, <i>e.g.</i>, entering
+                    <q>256GB</q> will return any computing device with storage or even
+                    <abbr title="Random Access Memory">RAM</abbr> (server) of 256GB.
+                </p>
+                <h4>💽 Data manipulation with the Computer Management System</h4>
+                <ul>
+                    <li>Add a new computer, choosing:
+                    <ul>
+                        <li>Serial Number,</li>
+                        <li>Make (Acer/Apple/etc.),</li>
+                        <li>Type (Laptop/Smartphone/etc.),</li>
+                        <li>Specification (Intel Core i5, 8GB RAM, 256GB SSD),</li>
+                        <li>Price (€399.99),</li>
+                    </ul></li>
+                    <li>Clear your input when you make a mistake,</li>
+                    <li>A confirmation that a new computer has been added to the system,</li>
+                    <li>Search for a computer using any part of the data (8GB RAM/Intel/Laptop/etc.),</li>
+                    <li>Delete a computer from the system, including a confirmation for which computer you're deleting,
+                    </li>
+                    <li>An area showing when the system was last updated, with an option to update the time to the
+                        current moment after making any modifications. Additionally, the system update time can be reset if
+                        required.</li>
+
+                </ul>
+            </div>
+        </section>
+    </div>
+</main>
+
+<footer>
+    <div class="footer-top">
+        <div class="logo"><a href="index.html" class="unstyled-link">CodeVerse</a></div>
+        <nav>
+            <ul class="footer-nav-list">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="data-manipulation.html">Data Manipulation</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="footer-bottom">
+        <span>© 2025 CodeVerse. All rights reserved. By <a href="mailto:21788075@mail.wit.ie">Joe O'Mahony</a>.</span>
+        <span id="date"></span>
+    </div>
+</footer>
+
+<script src="js/index.js"></script>
 </body>
 </html>

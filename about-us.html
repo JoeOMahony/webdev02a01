@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About CodeVerse</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/card-style.css">
+  <link rel="icon" href="images/favicon/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+<header>
+  <div class="logo"><a href="index.html" class="unstyled-link">CodeVerse</a></div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about-us.html" class="active">About Us</a></li>
+      <li><a href="data-manipulation.html">Data Manipulation</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <img id="banner-img-about-us" class="banner" src="images/about-us/about-us-1.png" alt="Banner Image">
+  <h1>About CodeVerse,</h1>
+  <div class="left-align">
+    <p>
+      This page offers information about <span class="site-name">CodeVerse</span> and the author, as well as an
+      interactive JSON array of the various programming languages supported on this website.
+    </p>
+    <ul style="list-style-type: none;">
+      <li>📖️ <a href="#background">Background of <span class="site-name">CodeVerse</span></a></li>
+      <li>👩‍💻️ <a href="#container-row"><span class="site-name">CodeVerse's</span> programming languages</a></li>
+      <li>✍️ <a href="#author">About the Author</a></li>
+    </ul>
+  </div>
+  <section id="background">
+    <h2 style="text-align: center;">Background of CodeVerse</h2>
+    <div class="left-align">
+      <p>
+        The reason I chose to do Assignment 01 on <span class="site-name">CodeVerse</span>, a website surrounding
+        programming and computers, is that it fits my hobbies and interests. It also allowed me to use a variety of
+        my favourite fonts, in particular <i>American Typewriter</i> and <i>Consolas</i>. The latter, <i>Consolas</i>,
+        is particularly interesting because it's a <dfn>monospaced</dfn> font. The following is a brief explanation of
+        what a monospaced font is, and is styled in <i>Consolas-</i>
+      </p>
+      <blockquote>
+        A monospaced font, also called a fixed-pitch, fixed-width, or non-proportional font,
+        is a font whose letters and characters each occupy the same amount of horizontal space.
+        This contrasts with variable-width fonts, where the letters and spacings have different widths.
+        <br /><br />
+        <cite><a href="https://en.wikipedia.org/wiki/Monospaced_font">Wikipedia</a></cite>
+      </blockquote>
+    </div>
+  </section>
+  <section>
+    <div id ="container-row">
+      <h2>CodeVerse's Programming Languages</h2>
+      <div class="left-align">
+        <p>
+          View the programming languages supported by <span class="site-name">CodeVerse</span> below, where you can
+          filter them according to their generally-accepted difficulty to learn. Each programming language has been
+          stored as a <abbr title="JavaScript Object Notation">JSON</abbr> object, which allows for easy
+          manipulation and retrieval.
+        </p>
+        <p>
+          Additionally, feel free to hover over any of the programming language cards to scale it up and change the
+          background colour to white, thereby making it much easier to read.
+        </p>
+      </div>
+      <form>
+        <div class = "form-row">
+          <label for = "difficulty">Difficulty to Learn: </label>
+          <select name="difficulty" id = "difficulty">
+            <option name="difficulty" value="Easy" selected>Easy</option>
+            <option name="difficulty" value="Moderate">Moderate</option>
+            <option name="difficulty" value="High">High</option>
+          </select>
+        </div>
+      </form>
+      <div class="cards"></div>
+    </div>
+  </section>
+  <section id="author">
+    <h2 style="text-align: center">About the Author</h2>
+    <p>
+      My name is <a href="mailto:21788075@mail.wit.ie">Joe O'Mahony</a> (W21788075) and I'm a SETU Waterford
+      student studying Computing. I'm in my second year, second semester of the course.
+    </p>
+    <p>
+      <span class="site-name">CodeVerse</span> was made for Trish O'Neill as part of the <i>Website Development 2</i>
+      module. This assignment demonstrates my learning in HTML and CSS over the last year and a half, and also in
+      JavaScript in the last 3 months.
+    </p>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-top">
+    <div class="logo"><a href="index.html" class="unstyled-link">CodeVerse</a></div>
+    <nav>
+      <ul class="footer-nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about-us.html" class="active">About Us</a></li>
+        <li><a href="data-manipulation.html">Data Manipulation</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 CodeVerse. All rights reserved. By <a href="mailto:21788075@mail.wit.ie">Joe O'Mahony</a>.</span>
+    <span id="date"></span>
+  </div>
+</footer>
+
+<script src="js/about-us.js"></script>
+</body>
+</html>

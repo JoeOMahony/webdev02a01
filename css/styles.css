@@ -1,28 +1,52 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* ------ FLEX BOX START ------ */
+html, body {
+    background: white;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0; /* No margin or padding by default, implement on individual elements instead*/
+    line-height: 1.25; /* Makes it much easier to read, 1.5 probably too much */
 }
+
+main {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    margin: 0 5%;
+    padding: 10px 20px;
+    /*
+    background-color: gainsboro; GREY
+    background-color: #F0F8FF; SLIGHTLY DARKER BABY BLUE
+    */
+    background-color: #F0FFFF;
+    align-items: center;
+}
+
+#container-row {
+    text-align: center;
+}
+/* ------ FLEX BOX END ------ */
 
 /* ------ PAGE HEADER START ------ */
 header {
-    font-family: "American Typewriter", "Courier New", serif;
+    font-family: "American Typewriter","Consolas", "Lucida Console", monospace, serif;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: navy;
+    background-image: linear-gradient(to bottom right, #00004d, dodgerblue);
     padding: 15px 25px;
     color: white;
 }
 
 .logo {
-    font-family: "Courier New", sans-serif;
+    font-family: "Courier New", "Consolas", "Lucida Console", monospace, sans-serif;
     font-size: 24px;
     font-weight: bold;
 }
 
 .logo:hover {
     color: darkorange;
+    font-weight: bolder;
 }
 
 nav ul {
@@ -43,10 +67,11 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: orange;
+    color: darkorange;
 }
 
 nav ul li a:visited {
+    text-decoration: none;
     /* leave blank, don't want navigation links to change colour */
 }
 
@@ -56,11 +81,215 @@ nav ul li a:visited {
 }
 /* ------ PAGE HEADER END ------ */
 
+/* ------ PAGE FOOTER START ------ */
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #00004d;
+    padding: 10px 20px;
+    color: white;
+    list-style: none;
+    gap: 2px;
+    /* FONT SETTINGS FOR SECOND ROW OF FLEXBOX FOOTER */
+    font-size: 14px;
+    font-family: "Consolas", "Lucida Console", monospace;
+}
+
+footer .logo {
+    font-size: 24px;
+}
+
+.footer-nav-list > li a {
+    font-family: "American Typewriter", "Courier New", serif;
+    font-size: 16px;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 20px;
+
+}
+
+.footer-bottom a {
+    text-decoration: underline;
+    color: white;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.footer-bottom a:hover {
+    text-decoration-style: dotted;
+    color: darkorange;
+}
+
+.footer-bottom a:visited {
+    /* leave blank, don't want navigation links to change colour */
+}
+/* ------ PAGE FOOTER END ------ */
+
+/* ------ BANNER IMAGE START ------ */
+.banner {
+    width: 65%;
+    height: auto;
+    max-width: 1200px;
+    max-height: 600px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+/* ------ BANNER IMAGE END ------ */
+
+/* ------ BODY TEXT STYLE START ------ */
 h1, h2, h3, h4, h5, h6 {
     font-family: "Courier New", "American Typewriter", "serif";
-    font-weight: bold;
+    color: #00004d;
+}
+
+h1, h4 {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    /* Come back when other pages made to see how the below looks
+    text-decoration: underline;
+    text-decoration-style: double;
+    text-decoration-color: #00004d;
+    /*
+     */
+}
+
+h3 {
+    font-size: 20px;
+    padding-bottom: 0;
+    margin-bottom: 1em;
+}
+/* When you drag the cursor across a block of text, selecting it. V. cool*/
+::selection {
+    background-color: darkorange;
+    color: white;
 }
 
 body {
     font-family: sans-serif;
+}
+
+.site-name {
+    font-family: "Courier New", "Consolas", "Lucida Console", monospace, sans-serif;
+    color: #00004d;
+    font-weight: bold;
+}
+
+.site-name:hover {
+    /* This activates upon hovering, even if there is no link
+       I still chose to implement, as this class is used on the site name
+       featured in links, which look very poorly without it.*/
+    color: darkorange;
+}
+
+abbr {
+    text-decoration-color: #00004d;
+}
+
+.left-align {
+    text-align: left;
+}
+
+/* ------ LINKS START ------ */
+a {
+    color: #00004d;
+}
+
+a:hover {
+    color: darkorange;
+    text-decoration: none;
+}
+
+a:active {
+    color: darkorange;
+    text-decoration: none;
+    text-decoration-color: darkorange;
+}
+
+/* Class for active links in navigation */
+.active {
+    font-weight: bold;
+}
+/* ------ LINKS END ------ */
+/* ------ BODY TEXT STYLE END ------ */
+
+/* ------ SECTIONS LAYOUT START ------ */
+.sections-side-by-side {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.sections-side-by-side > * {
+    /* This selects all children of the class and ensure they're distributed evenly.
+        Without it, the box resizes based only on need, making it look messy.
+        Padding also added to make it look neater. */
+    flex: 1;
+    padding: 10px;
+}
+/* ------ SECTIONS LAYOUT END ------ */
+
+/* ------ FACTORIAL START ------ */
+.factorial-section {
+    align-self: center;
+    font-family: "Consolas", "Lucida Console", monospace, sans-serif;
+    font-size: 14px;
+    padding-top: 2em;
+}
+
+.form-row {
+    padding-bottom: 10px;
+}
+
+label {
+    padding: 5px;
+}
+
+.factorial-section button {
+    font-family: "Consolas", "Lucida Console", monospace, sans-serif;
+    padding: 1em;
+    background: #00004d;
+    color: white;
+    border: 0;
+    border-radius: 5%;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.factorial-section button:active, #random-number:active {
+    background: orangered;
+    /* Transform used to make it look like it has actually been pushed in */
+    transform: scale(0.92);
+}
+
+#factorial {
+    /* Factorial display box */
+    font-style: italic;
+}
+
+#random-number {
+    background: royalblue;
+}
+/* ------ FACTORIAL END ------ */
+
+/* FOR ABOUT-US PAGE DEMONSTRATION*/
+blockquote {
+    font-family: "consolas", monospace;
+    font-size: 14px;
 }
