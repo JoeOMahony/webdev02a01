@@ -284,7 +284,8 @@ document.getElementById("searchInput").addEventListener("input", () => {
             computer.manufacturer.toLowerCase().includes(searchTerm) ||
             computer.type.toLowerCase().includes(searchTerm) ||
             computer.specification.toLowerCase().includes(searchTerm) ||
-            computer.price.includes(searchTerm)
+            // ONLY RUN THE BELOW IF IT IS(!!) A NUMBER, STOP THE ERROR
+            !(isNaN(searchTerm)) && computer.price === parseFloat(searchTerm)
         );
     });
 
