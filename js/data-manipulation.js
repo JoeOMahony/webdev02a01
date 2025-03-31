@@ -278,9 +278,13 @@ document.getElementById("searchInput").addEventListener("input", () => {
     let searchTerm = document.getElementById("searchInput").value.toLowerCase();
     const filteredComputers = computers.filter((computer) => {
         return (
+            // LATE MODIFICATION 31/03/25 14:28
+            // FORGOT TO ADD THE VALUES FOR THE KEYS I ADDED LATER
+            computer.serialNum.toLowerCase().includes(searchTerm) ||
             computer.manufacturer.toLowerCase().includes(searchTerm) ||
             computer.type.toLowerCase().includes(searchTerm) ||
-            computer.specification.toLowerCase().includes(searchTerm)
+            computer.specification.toLowerCase().includes(searchTerm) ||
+            computer.price.includes(searchTerm)
         );
     });
 
